@@ -19,13 +19,13 @@
 		0F3BED252868AFB50011213C /* item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3BED242868AFB50011213C /* item.swift */; };
 		0F3BED2A2868B9210011213C /* Profile-ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3BED292868B9210011213C /* Profile-ViewModel.swift */; };
 		0F3BED2C2868B9440011213C /* Home-ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3BED2B2868B9440011213C /* Home-ViewModel.swift */; };
-		0F3BED2E2868B9A90011213C /* Message-ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3BED2D2868B9A90011213C /* Message-ViewModel.swift */; };
+		0F3BED2E2868B9A90011213C /* Map-ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3BED2D2868B9A90011213C /* Map-ViewModel.swift */; };
 		0F3BED302868B9F60011213C /* Post-ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3BED2F2868B9F60011213C /* Post-ViewModel.swift */; };
 		0F3BED322868BA0F0011213C /* Explore-ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3BED312868BA0F0011213C /* Explore-ViewModel.swift */; };
 		0F3BED342868BA260011213C /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3BED332868BA260011213C /* HomeView.swift */; };
 		0F3BED362868BA310011213C /* ExploreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3BED352868BA310011213C /* ExploreView.swift */; };
 		0F3BED382868BA390011213C /* PostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3BED372868BA390011213C /* PostView.swift */; };
-		0F3BED3A2868BA430011213C /* MessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3BED392868BA430011213C /* MessageView.swift */; };
+		0F3BED3A2868BA430011213C /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3BED392868BA430011213C /* MapView.swift */; };
 		0F3BED3C2868BA4B0011213C /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3BED3B2868BA4B0011213C /* ProfileView.swift */; };
 		C54ACB59437A82369E87B3E7 /* Pods_CityBuy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA0010DC392D853FD9F36D97 /* Pods_CityBuy.framework */; };
 /* End PBXBuildFile section */
@@ -63,13 +63,13 @@
 		0F3BED282868B4920011213C /* CityBuyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CityBuyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0F3BED292868B9210011213C /* Profile-ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Profile-ViewModel.swift"; sourceTree = "<group>"; };
 		0F3BED2B2868B9440011213C /* Home-ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Home-ViewModel.swift"; sourceTree = "<group>"; };
-		0F3BED2D2868B9A90011213C /* Message-ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Message-ViewModel.swift"; sourceTree = "<group>"; };
+		0F3BED2D2868B9A90011213C /* Map-ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Map-ViewModel.swift"; sourceTree = "<group>"; };
 		0F3BED2F2868B9F60011213C /* Post-ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Post-ViewModel.swift"; sourceTree = "<group>"; };
 		0F3BED312868BA0F0011213C /* Explore-ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Explore-ViewModel.swift"; sourceTree = "<group>"; };
 		0F3BED332868BA260011213C /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		0F3BED352868BA310011213C /* ExploreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreView.swift; sourceTree = "<group>"; };
 		0F3BED372868BA390011213C /* PostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostView.swift; sourceTree = "<group>"; };
-		0F3BED392868BA430011213C /* MessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageView.swift; sourceTree = "<group>"; };
+		0F3BED392868BA430011213C /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		0F3BED3B2868BA4B0011213C /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		1716399DAB6D1CE7EC1090B0 /* Pods-CityBuy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CityBuy.release.xcconfig"; path = "Target Support Files/Pods-CityBuy/Pods-CityBuy.release.xcconfig"; sourceTree = "<group>"; };
 		65301C5568E1336174F1D3B9 /* Pods-CityBuy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CityBuy.debug.xcconfig"; path = "Target Support Files/Pods-CityBuy/Pods-CityBuy.debug.xcconfig"; sourceTree = "<group>"; };
@@ -181,7 +181,7 @@
 				0F3BED332868BA260011213C /* HomeView.swift */,
 				0F3BED352868BA310011213C /* ExploreView.swift */,
 				0F3BED372868BA390011213C /* PostView.swift */,
-				0F3BED392868BA430011213C /* MessageView.swift */,
+				0F3BED392868BA430011213C /* MapView.swift */,
 				0F3BED3B2868BA4B0011213C /* ProfileView.swift */,
 			);
 			path = View;
@@ -193,7 +193,7 @@
 				0F3BED2B2868B9440011213C /* Home-ViewModel.swift */,
 				0F3BED312868BA0F0011213C /* Explore-ViewModel.swift */,
 				0F3BED2F2868B9F60011213C /* Post-ViewModel.swift */,
-				0F3BED2D2868B9A90011213C /* Message-ViewModel.swift */,
+				0F3BED2D2868B9A90011213C /* Map-ViewModel.swift */,
 				0F3BED292868B9210011213C /* Profile-ViewModel.swift */,
 			);
 			path = ViewModel;
@@ -408,10 +408,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0F3BED3A2868BA430011213C /* MessageView.swift in Sources */,
+				0F3BED3A2868BA430011213C /* MapView.swift in Sources */,
 				0F3BED3C2868BA4B0011213C /* ProfileView.swift in Sources */,
 				0F3BED342868BA260011213C /* HomeView.swift in Sources */,
-				0F3BED2E2868B9A90011213C /* Message-ViewModel.swift in Sources */,
+				0F3BED2E2868B9A90011213C /* Map-ViewModel.swift in Sources */,
 				0F3BED2A2868B9210011213C /* Profile-ViewModel.swift in Sources */,
 				0F3BED322868BA0F0011213C /* Explore-ViewModel.swift in Sources */,
 				0F3BED362868BA310011213C /* ExploreView.swift in Sources */,

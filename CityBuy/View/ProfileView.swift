@@ -4,6 +4,9 @@
 //
 //  Created by Steve Shi on 6/26/22.
 //
+/**
+ A normal profile view with the pciture, followers, following, items sold, star ratings
+ */
 
 import SwiftUI
 
