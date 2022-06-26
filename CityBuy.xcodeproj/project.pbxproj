@@ -14,6 +14,7 @@
 		0F3BED032868A1910011213C /* CityBuyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3BED022868A1910011213C /* CityBuyTests.swift */; };
 		0F3BED0D2868A1910011213C /* CityBuyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3BED0C2868A1910011213C /* CityBuyUITests.swift */; };
 		0F3BED0F2868A1910011213C /* CityBuyUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3BED0E2868A1910011213C /* CityBuyUITestsLaunchTests.swift */; };
+		0F3BED1C2868A81F0011213C /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 0F3BED1B2868A81F0011213C /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,7 @@
 		0F3BED082868A1910011213C /* CityBuyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CityBuyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0F3BED0C2868A1910011213C /* CityBuyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityBuyUITests.swift; sourceTree = "<group>"; };
 		0F3BED0E2868A1910011213C /* CityBuyUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityBuyUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		0F3BED1B2868A81F0011213C /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +76,7 @@
 		0F3BECE52868A18E0011213C = {
 			isa = PBXGroup;
 			children = (
+				0F3BED1B2868A81F0011213C /* README.md */,
 				0F3BECF02868A18E0011213C /* CityBuy */,
 				0F3BED012868A1910011213C /* CityBuyTests */,
 				0F3BED0B2868A1910011213C /* CityBuyUITests */,
@@ -231,6 +234,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0F3BED1C2868A81F0011213C /* README.md in Resources */,
 				0F3BECF92868A1900011213C /* Preview Assets.xcassets in Resources */,
 				0F3BECF62868A1900011213C /* Assets.xcassets in Resources */,
 			);
