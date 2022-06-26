@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0F0EBF541FD89B9261CA98D8 /* Pods_CityBuy_CityBuyUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6387FF16BD5142A494EF21E /* Pods_CityBuy_CityBuyUITests.framework */; };
 		0F3BECF22868A18E0011213C /* CityBuyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3BECF12868A18E0011213C /* CityBuyApp.swift */; };
 		0F3BECF42868A18E0011213C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3BECF32868A18E0011213C /* ContentView.swift */; };
 		0F3BECF62868A1900011213C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0F3BECF52868A1900011213C /* Assets.xcassets */; };
@@ -15,6 +16,10 @@
 		0F3BED0D2868A1910011213C /* CityBuyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3BED0C2868A1910011213C /* CityBuyUITests.swift */; };
 		0F3BED0F2868A1910011213C /* CityBuyUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3BED0E2868A1910011213C /* CityBuyUITestsLaunchTests.swift */; };
 		0F3BED1C2868A81F0011213C /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 0F3BED1B2868A81F0011213C /* README.md */; };
+		0F3BED212868AE130011213C /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 0F3BED202868AE130011213C /* Podfile */; };
+		0F3BED232868AE4D0011213C /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 0F3BED222868AE4D0011213C /* .gitignore */; };
+		174E7D6F5650EE0756304E70 /* Pods_CityBuyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49F7E5DCADE96BAF8E8B2E20 /* Pods_CityBuyTests.framework */; };
+		AE1716BE07F70B525924AB1A /* Pods_CityBuy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 032EB63B9E0C440B564A4133 /* Pods_CityBuy.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +40,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		032EB63B9E0C440B564A4133 /* Pods_CityBuy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CityBuy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0F3BECEE2868A18E0011213C /* CityBuy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CityBuy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0F3BECF12868A18E0011213C /* CityBuyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityBuyApp.swift; sourceTree = "<group>"; };
 		0F3BECF32868A18E0011213C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -46,6 +52,16 @@
 		0F3BED0C2868A1910011213C /* CityBuyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityBuyUITests.swift; sourceTree = "<group>"; };
 		0F3BED0E2868A1910011213C /* CityBuyUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityBuyUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		0F3BED1B2868A81F0011213C /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		0F3BED202868AE130011213C /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
+		0F3BED222868AE4D0011213C /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		1C2A5DBA914912DD8C525C63 /* Pods-CityBuy-CityBuyUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CityBuy-CityBuyUITests.release.xcconfig"; path = "Target Support Files/Pods-CityBuy-CityBuyUITests/Pods-CityBuy-CityBuyUITests.release.xcconfig"; sourceTree = "<group>"; };
+		2CE097BF6147DCECA0EB8BB6 /* Pods-CityBuy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CityBuy.release.xcconfig"; path = "Target Support Files/Pods-CityBuy/Pods-CityBuy.release.xcconfig"; sourceTree = "<group>"; };
+		2CE721A6EC6D331B3A9753AF /* Pods-CityBuyTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CityBuyTests.debug.xcconfig"; path = "Target Support Files/Pods-CityBuyTests/Pods-CityBuyTests.debug.xcconfig"; sourceTree = "<group>"; };
+		49F7E5DCADE96BAF8E8B2E20 /* Pods_CityBuyTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CityBuyTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		809E7842459D749807494EF9 /* Pods-CityBuyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CityBuyTests.release.xcconfig"; path = "Target Support Files/Pods-CityBuyTests/Pods-CityBuyTests.release.xcconfig"; sourceTree = "<group>"; };
+		A6387FF16BD5142A494EF21E /* Pods_CityBuy_CityBuyUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CityBuy_CityBuyUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C2B9F0D5621D6F16160A514D /* Pods-CityBuy-CityBuyUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CityBuy-CityBuyUITests.debug.xcconfig"; path = "Target Support Files/Pods-CityBuy-CityBuyUITests/Pods-CityBuy-CityBuyUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		E53999171725C636A8D453C6 /* Pods-CityBuy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CityBuy.debug.xcconfig"; path = "Target Support Files/Pods-CityBuy/Pods-CityBuy.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +69,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AE1716BE07F70B525924AB1A /* Pods_CityBuy.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -60,6 +77,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				174E7D6F5650EE0756304E70 /* Pods_CityBuyTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -67,6 +85,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0F0EBF541FD89B9261CA98D8 /* Pods_CityBuy_CityBuyUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -76,11 +95,15 @@
 		0F3BECE52868A18E0011213C = {
 			isa = PBXGroup;
 			children = (
+				0F3BED222868AE4D0011213C /* .gitignore */,
 				0F3BED1B2868A81F0011213C /* README.md */,
+				0F3BED202868AE130011213C /* Podfile */,
 				0F3BECF02868A18E0011213C /* CityBuy */,
 				0F3BED012868A1910011213C /* CityBuyTests */,
 				0F3BED0B2868A1910011213C /* CityBuyUITests */,
 				0F3BECEF2868A18E0011213C /* Products */,
+				4090686114C3302F8667A083 /* Pods */,
+				E8F7EDEB8B4225D24876CB6D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -99,6 +122,9 @@
 			children = (
 				0F3BECF12868A18E0011213C /* CityBuyApp.swift */,
 				0F3BECF32868A18E0011213C /* ContentView.swift */,
+				0F3BED1D2868AC7A0011213C /* Model */,
+				0F3BED1E2868AC810011213C /* View */,
+				0F3BED1F2868AC8F0011213C /* ViewModel */,
 				0F3BECF52868A1900011213C /* Assets.xcassets */,
 				0F3BECF72868A1900011213C /* Preview Content */,
 			);
@@ -130,6 +156,50 @@
 			path = CityBuyUITests;
 			sourceTree = "<group>";
 		};
+		0F3BED1D2868AC7A0011213C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		0F3BED1E2868AC810011213C /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		0F3BED1F2868AC8F0011213C /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		4090686114C3302F8667A083 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E53999171725C636A8D453C6 /* Pods-CityBuy.debug.xcconfig */,
+				2CE097BF6147DCECA0EB8BB6 /* Pods-CityBuy.release.xcconfig */,
+				C2B9F0D5621D6F16160A514D /* Pods-CityBuy-CityBuyUITests.debug.xcconfig */,
+				1C2A5DBA914912DD8C525C63 /* Pods-CityBuy-CityBuyUITests.release.xcconfig */,
+				2CE721A6EC6D331B3A9753AF /* Pods-CityBuyTests.debug.xcconfig */,
+				809E7842459D749807494EF9 /* Pods-CityBuyTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		E8F7EDEB8B4225D24876CB6D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				032EB63B9E0C440B564A4133 /* Pods_CityBuy.framework */,
+				A6387FF16BD5142A494EF21E /* Pods_CityBuy_CityBuyUITests.framework */,
+				49F7E5DCADE96BAF8E8B2E20 /* Pods_CityBuyTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -137,9 +207,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0F3BED122868A1910011213C /* Build configuration list for PBXNativeTarget "CityBuy" */;
 			buildPhases = (
+				9C5ED3B7E8C3F073287A47E9 /* [CP] Check Pods Manifest.lock */,
 				0F3BECEA2868A18E0011213C /* Sources */,
 				0F3BECEB2868A18E0011213C /* Frameworks */,
 				0F3BECEC2868A18E0011213C /* Resources */,
+				B74BF713DCD119BF59F1D899 /* [CP] Embed Pods Frameworks */,
+				05F9F86B0D05257B2831328C /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -154,6 +227,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0F3BED152868A1910011213C /* Build configuration list for PBXNativeTarget "CityBuyTests" */;
 			buildPhases = (
+				F8768EC1FFA74DE0FFFB7BF0 /* [CP] Check Pods Manifest.lock */,
 				0F3BECFA2868A1910011213C /* Sources */,
 				0F3BECFB2868A1910011213C /* Frameworks */,
 				0F3BECFC2868A1910011213C /* Resources */,
@@ -172,9 +246,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0F3BED182868A1910011213C /* Build configuration list for PBXNativeTarget "CityBuyUITests" */;
 			buildPhases = (
+				DC38B196F3F29676EC8F9728 /* [CP] Check Pods Manifest.lock */,
 				0F3BED042868A1910011213C /* Sources */,
 				0F3BED052868A1910011213C /* Frameworks */,
 				0F3BED062868A1910011213C /* Resources */,
+				ABEEFA215427A0C59FF9A8E7 /* [CP] Embed Pods Frameworks */,
+				42E31CD634E5822D88DCDB5A /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -234,8 +311,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0F3BED232868AE4D0011213C /* .gitignore in Resources */,
 				0F3BED1C2868A81F0011213C /* README.md in Resources */,
 				0F3BECF92868A1900011213C /* Preview Assets.xcassets in Resources */,
+				0F3BED212868AE130011213C /* Podfile in Resources */,
 				0F3BECF62868A1900011213C /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -255,6 +334,143 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		05F9F86B0D05257B2831328C /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CityBuy/Pods-CityBuy-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CityBuy/Pods-CityBuy-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CityBuy/Pods-CityBuy-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		42E31CD634E5822D88DCDB5A /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CityBuy-CityBuyUITests/Pods-CityBuy-CityBuyUITests-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CityBuy-CityBuyUITests/Pods-CityBuy-CityBuyUITests-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CityBuy-CityBuyUITests/Pods-CityBuy-CityBuyUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9C5ED3B7E8C3F073287A47E9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CityBuy-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		ABEEFA215427A0C59FF9A8E7 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CityBuy-CityBuyUITests/Pods-CityBuy-CityBuyUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CityBuy-CityBuyUITests/Pods-CityBuy-CityBuyUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CityBuy-CityBuyUITests/Pods-CityBuy-CityBuyUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B74BF713DCD119BF59F1D899 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CityBuy/Pods-CityBuy-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CityBuy/Pods-CityBuy-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CityBuy/Pods-CityBuy-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DC38B196F3F29676EC8F9728 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CityBuy-CityBuyUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F8768EC1FFA74DE0FFFB7BF0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CityBuyTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		0F3BECEA2868A18E0011213C /* Sources */ = {
@@ -415,6 +631,7 @@
 		};
 		0F3BED132868A1910011213C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E53999171725C636A8D453C6 /* Pods-CityBuy.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -444,6 +661,7 @@
 		};
 		0F3BED142868A1910011213C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2CE097BF6147DCECA0EB8BB6 /* Pods-CityBuy.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -473,6 +691,7 @@
 		};
 		0F3BED162868A1910011213C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2CE721A6EC6D331B3A9753AF /* Pods-CityBuyTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -493,6 +712,7 @@
 		};
 		0F3BED172868A1910011213C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 809E7842459D749807494EF9 /* Pods-CityBuyTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -513,6 +733,7 @@
 		};
 		0F3BED192868A1910011213C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C2B9F0D5621D6F16160A514D /* Pods-CityBuy-CityBuyUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -531,6 +752,7 @@
 		};
 		0F3BED1A2868A1910011213C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1C2A5DBA914912DD8C525C63 /* Pods-CityBuy-CityBuyUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
