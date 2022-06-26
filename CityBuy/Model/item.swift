@@ -10,10 +10,10 @@ import Foundation
 struct item: Codable {
     let name: String
     let price: Double
-    let attributes: [String]
+    let attributes: [ItemAttributes]
 }
 
-enum ItemAttributes: String {
+enum ItemAttributes: String, Codable {
     case Home = "Home & Kitchen"
     case Beauty = "Beauty & Personal Care"
     case Toys = "Toys & Games"

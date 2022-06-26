@@ -17,6 +17,16 @@
 		0F3BED1C2868A81F0011213C /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 0F3BED1B2868A81F0011213C /* README.md */; };
 		0F3BED232868AE4D0011213C /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 0F3BED222868AE4D0011213C /* .gitignore */; };
 		0F3BED252868AFB50011213C /* item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3BED242868AFB50011213C /* item.swift */; };
+		0F3BED2A2868B9210011213C /* Profile-ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3BED292868B9210011213C /* Profile-ViewModel.swift */; };
+		0F3BED2C2868B9440011213C /* Home-ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3BED2B2868B9440011213C /* Home-ViewModel.swift */; };
+		0F3BED2E2868B9A90011213C /* Message-ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3BED2D2868B9A90011213C /* Message-ViewModel.swift */; };
+		0F3BED302868B9F60011213C /* Post-ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3BED2F2868B9F60011213C /* Post-ViewModel.swift */; };
+		0F3BED322868BA0F0011213C /* Explore-ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3BED312868BA0F0011213C /* Explore-ViewModel.swift */; };
+		0F3BED342868BA260011213C /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3BED332868BA260011213C /* HomeView.swift */; };
+		0F3BED362868BA310011213C /* ExploreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3BED352868BA310011213C /* ExploreView.swift */; };
+		0F3BED382868BA390011213C /* PostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3BED372868BA390011213C /* PostView.swift */; };
+		0F3BED3A2868BA430011213C /* MessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3BED392868BA430011213C /* MessageView.swift */; };
+		0F3BED3C2868BA4B0011213C /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3BED3B2868BA4B0011213C /* ProfileView.swift */; };
 		C54ACB59437A82369E87B3E7 /* Pods_CityBuy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA0010DC392D853FD9F36D97 /* Pods_CityBuy.framework */; };
 /* End PBXBuildFile section */
 
@@ -38,19 +48,29 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0F3BECEE2868A18E0011213C /* CityBuy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = CityBuy.app; path = "/Users/steveshi/Desktop/code/CityBuy/build/Debug-iphoneos/CityBuy.app"; sourceTree = "<absolute>"; };
 		0F3BECF12868A18E0011213C /* CityBuyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityBuyApp.swift; sourceTree = "<group>"; };
 		0F3BECF32868A18E0011213C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		0F3BECF52868A1900011213C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0F3BECF82868A1900011213C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		0F3BECFE2868A1910011213C /* CityBuyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = CityBuyTests.xctest; path = "/Users/steveshi/Desktop/code/CityBuy/build/Debug-iphoneos/CityBuyTests.xctest"; sourceTree = "<absolute>"; };
 		0F3BED022868A1910011213C /* CityBuyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityBuyTests.swift; sourceTree = "<group>"; };
-		0F3BED082868A1910011213C /* CityBuyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = CityBuyUITests.xctest; path = "/Users/steveshi/Desktop/code/CityBuy/build/Debug-iphoneos/CityBuyUITests.xctest"; sourceTree = "<absolute>"; };
 		0F3BED0C2868A1910011213C /* CityBuyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityBuyUITests.swift; sourceTree = "<group>"; };
 		0F3BED0E2868A1910011213C /* CityBuyUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityBuyUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		0F3BED1B2868A81F0011213C /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		0F3BED222868AE4D0011213C /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		0F3BED242868AFB50011213C /* item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = item.swift; sourceTree = "<group>"; };
+		0F3BED262868B4920011213C /* CityBuy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CityBuy.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0F3BED272868B4920011213C /* CityBuyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CityBuyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0F3BED282868B4920011213C /* CityBuyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CityBuyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0F3BED292868B9210011213C /* Profile-ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Profile-ViewModel.swift"; sourceTree = "<group>"; };
+		0F3BED2B2868B9440011213C /* Home-ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Home-ViewModel.swift"; sourceTree = "<group>"; };
+		0F3BED2D2868B9A90011213C /* Message-ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Message-ViewModel.swift"; sourceTree = "<group>"; };
+		0F3BED2F2868B9F60011213C /* Post-ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Post-ViewModel.swift"; sourceTree = "<group>"; };
+		0F3BED312868BA0F0011213C /* Explore-ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Explore-ViewModel.swift"; sourceTree = "<group>"; };
+		0F3BED332868BA260011213C /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		0F3BED352868BA310011213C /* ExploreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreView.swift; sourceTree = "<group>"; };
+		0F3BED372868BA390011213C /* PostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostView.swift; sourceTree = "<group>"; };
+		0F3BED392868BA430011213C /* MessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageView.swift; sourceTree = "<group>"; };
+		0F3BED3B2868BA4B0011213C /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		1716399DAB6D1CE7EC1090B0 /* Pods-CityBuy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CityBuy.release.xcconfig"; path = "Target Support Files/Pods-CityBuy/Pods-CityBuy.release.xcconfig"; sourceTree = "<group>"; };
 		65301C5568E1336174F1D3B9 /* Pods-CityBuy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CityBuy.debug.xcconfig"; path = "Target Support Files/Pods-CityBuy/Pods-CityBuy.debug.xcconfig"; sourceTree = "<group>"; };
 		AA0010DC392D853FD9F36D97 /* Pods_CityBuy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CityBuy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -88,7 +108,6 @@
 				65301C5568E1336174F1D3B9 /* Pods-CityBuy.debug.xcconfig */,
 				1716399DAB6D1CE7EC1090B0 /* Pods-CityBuy.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -102,6 +121,9 @@
 				0F3BED0B2868A1910011213C /* CityBuyUITests */,
 				06FE916F23D41636305906BC /* Pods */,
 				A351996A490A581BC9166062 /* Frameworks */,
+				0F3BED262868B4920011213C /* CityBuy.app */,
+				0F3BED272868B4920011213C /* CityBuyTests.xctest */,
+				0F3BED282868B4920011213C /* CityBuyUITests.xctest */,
 			);
 			sourceTree = "<group>";
 		};
@@ -148,6 +170,7 @@
 			isa = PBXGroup;
 			children = (
 				0F3BED242868AFB50011213C /* item.swift */,
+				0F3BED3D2868BA670011213C /* Managers */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -155,6 +178,11 @@
 		0F3BED1E2868AC810011213C /* View */ = {
 			isa = PBXGroup;
 			children = (
+				0F3BED332868BA260011213C /* HomeView.swift */,
+				0F3BED352868BA310011213C /* ExploreView.swift */,
+				0F3BED372868BA390011213C /* PostView.swift */,
+				0F3BED392868BA430011213C /* MessageView.swift */,
+				0F3BED3B2868BA4B0011213C /* ProfileView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -162,8 +190,20 @@
 		0F3BED1F2868AC8F0011213C /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				0F3BED2B2868B9440011213C /* Home-ViewModel.swift */,
+				0F3BED312868BA0F0011213C /* Explore-ViewModel.swift */,
+				0F3BED2F2868B9F60011213C /* Post-ViewModel.swift */,
+				0F3BED2D2868B9A90011213C /* Message-ViewModel.swift */,
+				0F3BED292868B9210011213C /* Profile-ViewModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		0F3BED3D2868BA670011213C /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Managers;
 			sourceTree = "<group>";
 		};
 		A351996A490A581BC9166062 /* Frameworks */ = {
@@ -194,7 +234,7 @@
 			);
 			name = CityBuy;
 			productName = CityBuy;
-			productReference = 0F3BECEE2868A18E0011213C /* CityBuy.app */;
+			productReference = 0F3BED262868B4920011213C /* CityBuy.app */;
 			productType = "com.apple.product-type.application";
 		};
 		0F3BECFD2868A1910011213C /* CityBuyTests */ = {
@@ -212,7 +252,7 @@
 			);
 			name = CityBuyTests;
 			productName = CityBuyTests;
-			productReference = 0F3BECFE2868A1910011213C /* CityBuyTests.xctest */;
+			productReference = 0F3BED272868B4920011213C /* CityBuyTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 		0F3BED072868A1910011213C /* CityBuyUITests */ = {
@@ -230,7 +270,7 @@
 			);
 			name = CityBuyUITests;
 			productName = CityBuyUITests;
-			productReference = 0F3BED082868A1910011213C /* CityBuyUITests.xctest */;
+			productReference = 0F3BED282868B4920011213C /* CityBuyUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -368,9 +408,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0F3BED3A2868BA430011213C /* MessageView.swift in Sources */,
+				0F3BED3C2868BA4B0011213C /* ProfileView.swift in Sources */,
+				0F3BED342868BA260011213C /* HomeView.swift in Sources */,
+				0F3BED2E2868B9A90011213C /* Message-ViewModel.swift in Sources */,
+				0F3BED2A2868B9210011213C /* Profile-ViewModel.swift in Sources */,
+				0F3BED322868BA0F0011213C /* Explore-ViewModel.swift in Sources */,
+				0F3BED362868BA310011213C /* ExploreView.swift in Sources */,
+				0F3BED2C2868B9440011213C /* Home-ViewModel.swift in Sources */,
 				0F3BECF42868A18E0011213C /* ContentView.swift in Sources */,
 				0F3BED252868AFB50011213C /* item.swift in Sources */,
+				0F3BED302868B9F60011213C /* Post-ViewModel.swift in Sources */,
 				0F3BECF22868A18E0011213C /* CityBuyApp.swift in Sources */,
+				0F3BED382868BA390011213C /* PostView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
