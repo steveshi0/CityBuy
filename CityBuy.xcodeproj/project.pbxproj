@@ -74,6 +74,13 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		0F39FDE8287131D4008E320E /* Service */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
 		0F3BECE52868A18E0011213C = {
 			isa = PBXGroup;
 			children = (
@@ -91,6 +98,7 @@
 			children = (
 				0F3BECF12868A18E0011213C /* CityBuyApp.swift */,
 				0F3BECF32868A18E0011213C /* ContentView.swift */,
+				0F39FDE8287131D4008E320E /* Service */,
 				0F3BED1D2868AC7A0011213C /* Model */,
 				0F3BED1E2868AC810011213C /* View */,
 				0F3BED1F2868AC8F0011213C /* ViewModel */,
@@ -112,7 +120,6 @@
 			isa = PBXGroup;
 			children = (
 				0F3BED242868AFB50011213C /* item.swift */,
-				0F3BED3D2868BA670011213C /* Managers */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -139,13 +146,6 @@
 				0F3BED292868B9210011213C /* Profile-ViewModel.swift */,
 			);
 			path = ViewModel;
-			sourceTree = "<group>";
-		};
-		0F3BED3D2868BA670011213C /* Managers */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Managers;
 			sourceTree = "<group>";
 		};
 		A351996A490A581BC9166062 /* Frameworks */ = {
