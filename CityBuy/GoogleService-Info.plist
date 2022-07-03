@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>863618965736-5up61v0eqvotr8v1riu2ucosenhv7j2s.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.863618965736-5up61v0eqvotr8v1riu2ucosenhv7j2s</string>
+	<key>API_KEY</key>
+	<string>AIzaSyB-HNK07qBh3bafKPH-jUxw0t4YYuvTdSw</string>
+	<key>GCM_SENDER_ID</key>
+	<string>863618965736</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.st3veshi.CityBuy</string>
+	<key>PROJECT_ID</key>
+	<string>citybuy-4e787</string>
+	<key>STORAGE_BUCKET</key>
+	<string>citybuy-4e787.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:863618965736:ios:c6d8b99a443e076c6ca95d</string>
+</dict>
+</plist>
