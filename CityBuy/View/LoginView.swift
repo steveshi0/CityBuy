@@ -45,7 +45,6 @@ struct LoginView: View {
                 
                 Button("Login") {
                     loginVM.login { res in
-                        auth.updateValidation(validation: true)
                         if res {
                             auth.updateValidation(validation: res)
                         } else {
