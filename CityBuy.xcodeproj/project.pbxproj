@@ -18,7 +18,6 @@
 		0F3BECF92868A1900011213C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0F3BECF82868A1900011213C /* Preview Assets.xcassets */; };
 		0F3BED1C2868A81F0011213C /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 0F3BED1B2868A81F0011213C /* README.md */; };
 		0F3BED232868AE4D0011213C /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 0F3BED222868AE4D0011213C /* .gitignore */; };
-		0F3BED252868AFB50011213C /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3BED242868AFB50011213C /* Item.swift */; };
 		0F3BED2A2868B9210011213C /* Profile-ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3BED292868B9210011213C /* Profile-ViewModel.swift */; };
 		0F3BED2C2868B9440011213C /* Home-ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3BED2B2868B9440011213C /* Home-ViewModel.swift */; };
 		0F3BED2E2868B9A90011213C /* Map-ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3BED2D2868B9A90011213C /* Map-ViewModel.swift */; };
@@ -52,7 +51,6 @@
 		0F3BECF82868A1900011213C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		0F3BED1B2868A81F0011213C /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		0F3BED222868AE4D0011213C /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
-		0F3BED242868AFB50011213C /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		0F3BED262868B4920011213C /* CityBuy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CityBuy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0F3BED292868B9210011213C /* Profile-ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Profile-ViewModel.swift"; sourceTree = "<group>"; };
 		0F3BED2B2868B9440011213C /* Home-ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Home-ViewModel.swift"; sourceTree = "<group>"; };
@@ -157,7 +155,6 @@
 			isa = PBXGroup;
 			children = (
 				0F125B1F2871FE4600AD5E28 /* User.swift */,
-				0F3BED242868AFB50011213C /* Item.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -365,7 +362,6 @@
 				0F3BED2C2868B9440011213C /* Home-ViewModel.swift in Sources */,
 				0F3BECF42868A18E0011213C /* ContentView.swift in Sources */,
 				0F285C35287B5A7D00BAD94B /* SignUpView.swift in Sources */,
-				0F3BED252868AFB50011213C /* Item.swift in Sources */,
 				0F3BED302868B9F60011213C /* Post-ViewModel.swift in Sources */,
 				0F3BECF22868A18E0011213C /* CityBuyApp.swift in Sources */,
 				0F285C37287B5AEF00BAD94B /* RecoveryView.swift in Sources */,
