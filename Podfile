@@ -11,6 +11,7 @@ target 'CityBuy' do
   pod 'FirebaseUI'
   pod 'Firebase/Storage'
   pod 'FirebaseFirestore'
+  pod 'FirebaseFirestoreSwift'
 
   post_install do |installer|
       installer.pods_project.targets.each do |target|
