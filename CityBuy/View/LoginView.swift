@@ -10,7 +10,9 @@ import SwiftUI
 
 struct LoginView: View {
     @ObservedObject var LoginVM = LoginViewModel()
-    @State private var showError: Bool = false
+    @State private var showError = false
+    @State private var showRecoverySheet = false
+    @State private var showSignUpSheet = false
     
     var body: some View {
         NavigationView {
@@ -25,12 +27,20 @@ struct LoginView: View {
                     .frame(width: 300, height: 50)
                     .background(Color.black.opacity(0.05))
                     .cornerRadius(10)
+                    .autocapitalization(.none)
                 
                 SecureField("Password", text: $LoginVM.password)
                     .padding()
                     .frame(width: 300, height: 50)
                     .background(Color.black.opacity(0.05))
                     .cornerRadius(10)
+                
+                HStack {
+                    Spacer()
+                    Button("Forgot password") {
+                        showRecoverySheet = true
+                    }
+                }.frame(width: 300, height: 30)
                 
                 Button("Login") {
                     LoginVM.login { res in
@@ -44,6 +54,18 @@ struct LoginView: View {
                 .background(Color.blue)
                 .cornerRadius(10)
                 .padding()
+                
+                labelledDivider(label: "New user?", horizontalPadding: 50)
+                
+                Button("Sign Up") {
+                    showSignUpSheet = true
+                }
+                .foregroundColor(.white)
+                .frame(width: 300, height: 50)
+                .background(Color.purple)
+                .cornerRadius(10)
+                .padding()
+                
                 Spacer()
             }
             .alert(isPresented: $showError) {
@@ -53,6 +75,32 @@ struct LoginView: View {
                 )
             }
             
+        }
+    }
+}
+
+// An divider with text in the middle   -----??-----
+struct labelledDivider: View {
+    let label: String
+    let horizontalPadding: CGFloat
+    
+    init(label: String, horizontalPadding: CGFloat = 10) {
+        self.label = label
+        self.horizontalPadding = horizontalPadding
+    }
+    var body: some View {
+        HStack {
+            line
+                .padding(EdgeInsets(top: 0, leading: horizontalPadding, bottom: 0, trailing: 0))
+            Text(label)
+                .foregroundColor(.black)
+            line
+                .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: horizontalPadding))
+        }
+    }
+    var line: some View {
+        VStack {
+            Divider().background(.black)
         }
     }
 }
