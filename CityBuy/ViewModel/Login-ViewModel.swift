@@ -33,6 +33,11 @@ class LoginViewModel: ObservableObject {
             completion(res)
         }
     }
+    func resetPassword(email: String, completion: @escaping (Bool) -> Void) {
+        AuthManager.shared.resetPassword(email: email) { res in
+            completion(res)
+        }
+    }
     
     // Check to see if the user was previously signed in
     func checkLogState() {

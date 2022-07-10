@@ -8,7 +8,8 @@
 import Foundation
 import Firebase
 
-struct User {
+struct User: Identifiable {
+    let id: UUID
     let name: String
-    let location: GeoPoint
+    let longitute: GeoPoint
 }

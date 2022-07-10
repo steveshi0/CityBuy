@@ -9,7 +9,8 @@ import Foundation
 import SwiftUI
 
 struct LoginView: View {
-    @ObservedObject var LoginVM = LoginViewModel()
+    @ObservedObject var loginVM = LoginViewModel()
+    @EnvironmentObject var auth: Authentification
     @State private var showError = false
     @State private var showRecoverySheet = false
     @State private var showSignUpSheet = false
@@ -22,14 +23,14 @@ struct LoginView: View {
                     .bold()
                     .padding()
                 
-                TextField("Username", text: $LoginVM.username)
+                TextField("Email", text: $loginVM.username)
                     .padding()
                     .frame(width: 300, height: 50)
                     .background(Color.black.opacity(0.05))
                     .cornerRadius(10)
                     .autocapitalization(.none)
                 
-                SecureField("Password", text: $LoginVM.password)
+                SecureField("Password", text: $loginVM.password)
                     .padding()
                     .frame(width: 300, height: 50)
                     .background(Color.black.opacity(0.05))
@@ -37,14 +38,17 @@ struct LoginView: View {
                 
                 HStack {
                     Spacer()
-                    Button("Forgot password") {
-                        showRecoverySheet = true
+                    NavigationLink("Forgot password") {
+                        RecoveryView()
                     }
                 }.frame(width: 300, height: 30)
                 
                 Button("Login") {
-                    LoginVM.login { res in
-                        if !res {
+                    loginVM.login { res in
+                        auth.updateValidation(validation: true)
+                        if res {
+                            auth.updateValidation(validation: res)
+                        } else {
                             showError = true
                         }
                     }
@@ -57,8 +61,8 @@ struct LoginView: View {
                 
                 labelledDivider(label: "New user?", horizontalPadding: 50)
                 
-                Button("Sign Up") {
-                    showSignUpSheet = true
+                NavigationLink("Sign Up") {
+                    SignUpView()
                 }
                 .foregroundColor(.white)
                 .frame(width: 300, height: 50)

@@ -50,4 +50,14 @@ final class AuthManager {
             completion(false)
         }
     }
+    
+    public func resetPassword(email: String, completion: @escaping (Bool) -> Void) {
+        auth.sendPasswordReset(withEmail: email) { err in
+            if err == nil {
+                completion(true)
+            } else {
+                completion(false)
+            }
+        }
+    }
 }
