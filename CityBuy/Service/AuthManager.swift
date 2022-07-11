@@ -29,6 +29,7 @@ final class AuthManager {
         guard !email.trimmingCharacters(in: .whitespaces).isEmpty,
               !password.trimmingCharacters(in: .whitespaces).isEmpty,
                 password.count > 7 else {
+            completion(false)
             return
         }
         

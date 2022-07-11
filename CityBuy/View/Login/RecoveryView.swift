@@ -10,33 +10,52 @@ import SwiftUI
 struct RecoveryView: View {
     @State private var email = ""
     @State private var showError = false
+    @State private var loadingMsg = false
     @ObservedObject var loginVM = LoginViewModel()
     @Environment(\.dismiss) var dismiss
     
     var body: some View {
         NavigationView {
-            VStack {
+            VStack(spacing: 15) {
+                Text("Reset Password")
+                    .foregroundColor(Color("Text"))
+                    .font(.largeTitle)
+                    .bold()
+                    .padding()
+                
                 TextField("Email", text: $email)
                     .padding()
                     .frame(width: 300, height: 50)
-                    .background(Color.black.opacity(0.05))
                     .cornerRadius(10)
                     .autocapitalization(.none)
+                    .overlay(
+                        RoundedRectangle(cornerRadius: 5.0)
+                            .strokeBorder(Color("Text"), style: StrokeStyle(lineWidth: 0.75)))
                 
-                Button("Reset Password") {
-                    loginVM.resetPassword(email: email) { res in
-                        if res {
-                            dismiss()
-                        } else {
-                            showError = true
+                if loadingMsg {
+                    ProgressView()
+                        .frame(width: 300, height: 50)
+                        .padding()
+                } else {
+                    Button("Reset Password") {
+                        loadingMsg = true
+                        loginVM.resetPassword(email: email) { res in
+                            if res {
+                                dismiss()
+                            } else {
+                                showError = true
+                            }
+                            DispatchQueue.main.async {
+                                loadingMsg = false
+                            }
                         }
                     }
+                    .foregroundColor(.white)
+                    .frame(width: 300, height: 50)
+                    .background(Color.red)
+                    .cornerRadius(10)
+                    .padding()
                 }
-                .foregroundColor(.white)
-                .frame(width: 300, height: 50)
-                .background(Color.red)
-                .cornerRadius(10)
-                .padding()
                 
                 Spacer()
             }
