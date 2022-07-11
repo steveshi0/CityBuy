@@ -12,62 +12,79 @@ struct LoginView: View {
     @ObservedObject var loginVM = LoginViewModel()
     @EnvironmentObject var auth: Authentification
     @State private var showError = false
-    @State private var showRecoverySheet = false
-    @State private var showSignUpSheet = false
+    @State private var loadingMsg = false
     
     var body: some View {
         NavigationView {
-            VStack {
+            VStack(spacing: 15) {
                 Text("Login")
+                    .foregroundColor(Color("Text"))
                     .font(.largeTitle)
                     .bold()
                     .padding()
                 
-                TextField("Email", text: $loginVM.username)
-                    .padding()
-                    .frame(width: 300, height: 50)
-                    .background(Color.black.opacity(0.05))
-                    .cornerRadius(10)
+                TextField("Email address", text: $loginVM.username)
+                    .foregroundColor(Color("Text"))
+                    .padding(10)
+                    .frame(width: 375, height: 50)
                     .autocapitalization(.none)
+                    .overlay(
+                        RoundedRectangle(cornerRadius: 5.0)
+                            .strokeBorder(Color("Text"), style: StrokeStyle(lineWidth: 0.5)))
                 
                 SecureField("Password", text: $loginVM.password)
-                    .padding()
-                    .frame(width: 300, height: 50)
-                    .background(Color.black.opacity(0.05))
-                    .cornerRadius(10)
+                    .foregroundColor(Color("Text"))
+                    .padding(10)
+                    .frame(width: 375, height: 50)
+                    .autocapitalization(.none)
+                    .overlay(
+                        RoundedRectangle(cornerRadius: 5.0)
+                            .strokeBorder(Color("Text"), style: StrokeStyle(lineWidth: 0.5)))
                 
                 HStack {
                     Spacer()
-                    NavigationLink("Forgot password") {
+                    NavigationLink {
                         RecoveryView()
+                    } label: {
+                        Text("Forgot password?")
                     }
-                }.frame(width: 300, height: 30)
+                }.frame(width: 375, height: 30)
                 
-                Button("Login") {
-                    loginVM.login { res in
-                        if res {
-                            auth.updateValidation(validation: res)
-                        } else {
-                            showError = true
+                if loadingMsg {
+                    ProgressView()
+                        .frame(width: 375, height: 50)
+                        .padding()
+                } else {
+                    Button("Login") {
+                        loadingMsg = true
+                        loginVM.login { res in
+                            if res {
+                                auth.updateValidation(validation: res)
+                            } else {
+                                showError = true
+                            }
+                            DispatchQueue.main.async {
+                                loadingMsg = false
+                            }
                         }
                     }
+                    .foregroundColor(.white)
+                    .frame(width: 375, height: 50)
+                    .background(Color.blue)
+                    .cornerRadius(10)
+                    .padding()
                 }
-                .foregroundColor(.white)
-                .frame(width: 300, height: 50)
-                .background(Color.blue)
-                .cornerRadius(10)
-                .padding()
                 
-                labelledDivider(label: "New user?", horizontalPadding: 50)
-                
-                NavigationLink("Sign Up") {
-                    SignUpView()
+                HStack {
+                    Text("Dont have an account?")
+                    NavigationLink {
+                        SignUpView()
+                    } label: {
+                        Text("Sign Up")
+                            .foregroundColor(Color("Text"))
+                            .fontWeight(.medium)
+                    }
                 }
-                .foregroundColor(.white)
-                .frame(width: 300, height: 50)
-                .background(Color.purple)
-                .cornerRadius(10)
-                .padding()
                 
                 Spacer()
             }
@@ -78,32 +95,6 @@ struct LoginView: View {
                 )
             }
             
-        }
-    }
-}
-
-// An divider with text in the middle   -----??-----
-struct labelledDivider: View {
-    let label: String
-    let horizontalPadding: CGFloat
-    
-    init(label: String, horizontalPadding: CGFloat = 10) {
-        self.label = label
-        self.horizontalPadding = horizontalPadding
-    }
-    var body: some View {
-        HStack {
-            line
-                .padding(EdgeInsets(top: 0, leading: horizontalPadding, bottom: 0, trailing: 0))
-            Text(label)
-                .foregroundColor(.black)
-            line
-                .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: horizontalPadding))
-        }
-    }
-    var line: some View {
-        VStack {
-            Divider().background(.black)
         }
     }
 }
