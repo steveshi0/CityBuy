@@ -15,7 +15,7 @@ struct SignUpView: View {
     @State private var showError = false
     @State private var loadingMsg = false
     @ObservedObject var loginVM = LoginViewModel()
-    @EnvironmentObject var auth: Authentification
+    @EnvironmentObject var auth: Authentication
     
     var body: some View {
         NavigationView {
@@ -32,7 +32,7 @@ struct SignUpView: View {
                     .frame(width: 375, height: 50)
                     .autocapitalization(.none)
                     .overlay(
-                        RoundedRectangle(cornerRadius: 5.0)
+                        RoundedRectangle(cornerRadius: 10.0)
                             .strokeBorder(Color("Text"), style: StrokeStyle(lineWidth: 0.75)))
                 
                 TextField("Last Name", text: $lastname)
@@ -41,7 +41,7 @@ struct SignUpView: View {
                     .frame(width: 375, height: 50)
                     .autocapitalization(.none)
                     .overlay(
-                        RoundedRectangle(cornerRadius: 5.0)
+                        RoundedRectangle(cornerRadius: 10.0)
                             .strokeBorder(Color("Text"), style: StrokeStyle(lineWidth: 0.75)))
                 
                 TextField("Email address", text: $useremail)
@@ -50,7 +50,7 @@ struct SignUpView: View {
                     .frame(width: 375, height: 50)
                     .autocapitalization(.none)
                     .overlay(
-                        RoundedRectangle(cornerRadius: 5.0)
+                        RoundedRectangle(cornerRadius: 10.0)
                             .strokeBorder(Color("Text"), style: StrokeStyle(lineWidth: 0.75)))
                 
                 SecureField("Password", text: $password)
@@ -59,7 +59,7 @@ struct SignUpView: View {
                     .frame(width: 375, height: 50)
                     .autocapitalization(.none)
                     .overlay(
-                        RoundedRectangle(cornerRadius: 5.0)
+                        RoundedRectangle(cornerRadius: 10.0)
                             .strokeBorder(Color("Text"), style: StrokeStyle(lineWidth: 0.75)))
                 
                 if loadingMsg {
@@ -83,7 +83,7 @@ struct SignUpView: View {
                     .foregroundColor(.white)
                     .frame(width: 375, height: 50)
                     .background(Color.blue)
-                    .cornerRadius(10)
+                    .cornerRadius(10.0)
                     .padding()
                 }
                 Spacer()

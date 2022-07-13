@@ -22,7 +22,7 @@ struct YourApp: App {
     // register app delegate for Firebase setup
     @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
     
-    @StateObject var auth = Authentification()
+    @StateObject var auth = Authentication()
     
     var body: some Scene {
         WindowGroup {

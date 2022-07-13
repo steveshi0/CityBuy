@@ -10,7 +10,7 @@ import SwiftUI
 
 struct LoginView: View {
     @ObservedObject var loginVM = LoginViewModel()
-    @EnvironmentObject var auth: Authentification
+    @EnvironmentObject var auth: Authentication
     @State private var showError = false
     @State private var loadingMsg = false
     
@@ -29,7 +29,7 @@ struct LoginView: View {
                     .frame(width: 375, height: 50)
                     .autocapitalization(.none)
                     .overlay(
-                        RoundedRectangle(cornerRadius: 5.0)
+                        RoundedRectangle(cornerRadius: 10.0)
                             .strokeBorder(Color("Text"), style: StrokeStyle(lineWidth: 0.5)))
                 
                 SecureField("Password", text: $loginVM.password)
@@ -38,7 +38,7 @@ struct LoginView: View {
                     .frame(width: 375, height: 50)
                     .autocapitalization(.none)
                     .overlay(
-                        RoundedRectangle(cornerRadius: 5.0)
+                        RoundedRectangle(cornerRadius: 10.0)
                             .strokeBorder(Color("Text"), style: StrokeStyle(lineWidth: 0.5)))
                 
                 HStack {
@@ -71,7 +71,7 @@ struct LoginView: View {
                     .foregroundColor(.white)
                     .frame(width: 375, height: 50)
                     .background(Color.blue)
-                    .cornerRadius(10)
+                    .cornerRadius(10.0)
                     .padding()
                 }
                 

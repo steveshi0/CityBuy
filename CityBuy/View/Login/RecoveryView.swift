@@ -24,13 +24,13 @@ struct RecoveryView: View {
                     .padding()
                 
                 TextField("Email", text: $email)
-                    .padding()
-                    .frame(width: 300, height: 50)
-                    .cornerRadius(10)
+                    .foregroundColor(Color("Text"))
+                    .padding(10)
+                    .frame(width: 375, height: 50)
                     .autocapitalization(.none)
                     .overlay(
-                        RoundedRectangle(cornerRadius: 5.0)
-                            .strokeBorder(Color("Text"), style: StrokeStyle(lineWidth: 0.75)))
+                        RoundedRectangle(cornerRadius: 10.0)
+                            .strokeBorder(Color("Text"), style: StrokeStyle(lineWidth: 0.5)))
                 
                 if loadingMsg {
                     ProgressView()
@@ -53,7 +53,7 @@ struct RecoveryView: View {
                     .foregroundColor(.white)
                     .frame(width: 300, height: 50)
                     .background(Color.red)
-                    .cornerRadius(10)
+                    .cornerRadius(10.0)
                     .padding()
                 }
                 
