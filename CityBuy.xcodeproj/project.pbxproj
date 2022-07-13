@@ -35,7 +35,7 @@
 		0F4A4BE0287B3225001DD803 /* Login-ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F4A4BDF287B3225001DD803 /* Login-ViewModel.swift */; };
 		0F4A4BE2287B3635001DD803 /* AuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F4A4BE1287B3635001DD803 /* AuthManager.swift */; };
 		0F4A4BE6287B39EF001DD803 /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F4A4BE5287B39EF001DD803 /* Error.swift */; };
-		0F4A4BE8287B3DE0001DD803 /* Authentification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F4A4BE7287B3DE0001DD803 /* Authentification.swift */; };
+		0F4A4BE8287B3DE0001DD803 /* Authentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F4A4BE7287B3DE0001DD803 /* Authentication.swift */; };
 		C54ACB59437A82369E87B3E7 /* Pods_CityBuy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA0010DC392D853FD9F36D97 /* Pods_CityBuy.framework */; };
 /* End PBXBuildFile section */
 
@@ -69,7 +69,7 @@
 		0F4A4BDF287B3225001DD803 /* Login-ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Login-ViewModel.swift"; sourceTree = "<group>"; };
 		0F4A4BE1287B3635001DD803 /* AuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthManager.swift; sourceTree = "<group>"; };
 		0F4A4BE5287B39EF001DD803 /* Error.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Error.swift; sourceTree = "<group>"; };
-		0F4A4BE7287B3DE0001DD803 /* Authentification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Authentification.swift; sourceTree = "<group>"; };
+		0F4A4BE7287B3DE0001DD803 /* Authentication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Authentication.swift; sourceTree = "<group>"; };
 		1716399DAB6D1CE7EC1090B0 /* Pods-CityBuy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CityBuy.release.xcconfig"; path = "Target Support Files/Pods-CityBuy/Pods-CityBuy.release.xcconfig"; sourceTree = "<group>"; };
 		65301C5568E1336174F1D3B9 /* Pods-CityBuy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CityBuy.debug.xcconfig"; path = "Target Support Files/Pods-CityBuy/Pods-CityBuy.debug.xcconfig"; sourceTree = "<group>"; };
 		AA0010DC392D853FD9F36D97 /* Pods_CityBuy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CityBuy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -180,7 +180,7 @@
 		0F3BED1F2868AC8F0011213C /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				0F4A4BE7287B3DE0001DD803 /* Authentification.swift */,
+				0F4A4BE7287B3DE0001DD803 /* Authentication.swift */,
 				0F4A4BDF287B3225001DD803 /* Login-ViewModel.swift */,
 				0F3BED2B2868B9440011213C /* Home-ViewModel.swift */,
 				0F3BED312868BA0F0011213C /* Explore-ViewModel.swift */,
@@ -361,7 +361,7 @@
 				0F3BED322868BA0F0011213C /* Explore-ViewModel.swift in Sources */,
 				0F125B202871FE4600AD5E28 /* User.swift in Sources */,
 				0F4A4BE0287B3225001DD803 /* Login-ViewModel.swift in Sources */,
-				0F4A4BE8287B3DE0001DD803 /* Authentification.swift in Sources */,
+				0F4A4BE8287B3DE0001DD803 /* Authentication.swift in Sources */,
 				0F3BED362868BA310011213C /* ExploreView.swift in Sources */,
 				0F3BED2C2868B9440011213C /* Home-ViewModel.swift in Sources */,
 				0F3BECF42868A18E0011213C /* ContentView.swift in Sources */,

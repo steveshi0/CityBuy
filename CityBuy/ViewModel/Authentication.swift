@@ -7,7 +7,7 @@
 
 import Foundation
 
-class Authentification: ObservableObject {
+class Authentication: ObservableObject {
     @Published var isValidated: Bool = false
     
     func updateValidation(validation: Bool) {
