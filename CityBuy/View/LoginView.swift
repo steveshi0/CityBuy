@@ -68,7 +68,7 @@ struct LoginView: View {
                             }
                         }
                     }
-                    .foregroundColor(.white)
+                    .foregroundColor(Color("Text"))
                     .frame(width: 375, height: 50)
                     .background(Color.blue)
                     .cornerRadius(10.0)

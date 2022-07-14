@@ -6,8 +6,11 @@
 //
 
 import SwiftUI
+import Inject
 
 struct ContentView: View {
+    @ObserveInjection var inject // INJECT
+    
     var body: some View {
         TabView {
             HomeView()
@@ -31,6 +34,8 @@ struct ContentView: View {
                     Label("Profile", systemImage: "person.crop.circle")
                 }
         }
+        
+        .enableInjection() // INJECT
     }
 }
 

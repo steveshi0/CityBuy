@@ -14,10 +14,29 @@
 import SwiftUI
 
 struct HomeView: View {
+    @StateObject var HomeVM = HomeViewModel()
+    @State private var search = ""
+    @State private var popup = false
+    // GridItem column
     
     var body: some View {
-        NavigationView {
+        VStack {
+            HomeNavView()
             
+            GeometryReader { geo in
+                VStack(alignment: .center, spacing: 0) {
+                    ScrollView(.vertical, showsIndicators: false) {
+                        LazyVGrid(columns: Array.init(repeating: GridItem(.adaptive(minimum: geo.size.width / 2)), count: 2), spacing: 5) {
+                            ForEach (0..<11) { _ in
+                                Rectangle()
+                                    .frame(width: geo.size.width / 2.35, height: geo.size.width / 2.35)
+                                    .background(Color.red)
+                            }
+                        }
+                    }
+                    .padding()
+                }.background(Color("Background"))
+            }
         }
     }
 }

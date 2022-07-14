@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		0F125B1E2871F88700AD5E28 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0F125B1D2871F88700AD5E28 /* GoogleService-Info.plist */; };
 		0F125B202871FE4600AD5E28 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F125B1F2871FE4600AD5E28 /* User.swift */; };
+		0F17FA032880476A005618A4 /* HomeNavView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F17FA022880476A005618A4 /* HomeNavView.swift */; };
+		0F17FA0528804B2F005618A4 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F17FA0428804B2F005618A4 /* Extensions.swift */; };
 		0F285C33287B557400BAD94B /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F285C32287B557400BAD94B /* DatabaseManager.swift */; };
 		0F285C35287B5A7D00BAD94B /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F285C34287B5A7D00BAD94B /* SignUpView.swift */; };
 		0F285C37287B5AEF00BAD94B /* RecoveryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F285C36287B5AEF00BAD94B /* RecoveryView.swift */; };
@@ -43,6 +45,8 @@
 		0F125B1D2871F88700AD5E28 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		0F125B1F2871FE4600AD5E28 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		0F125B2428720A6300AD5E28 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		0F17FA022880476A005618A4 /* HomeNavView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeNavView.swift; sourceTree = "<group>"; };
+		0F17FA0428804B2F005618A4 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		0F285C32287B557400BAD94B /* DatabaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseManager.swift; sourceTree = "<group>"; };
 		0F285C34287B5A7D00BAD94B /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 		0F285C36287B5AEF00BAD94B /* RecoveryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecoveryView.swift; sourceTree = "<group>"; };
@@ -95,6 +99,14 @@
 				1716399DAB6D1CE7EC1090B0 /* Pods-CityBuy.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		0F17FA01287F9ED1005618A4 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				0F17FA022880476A005618A4 /* HomeNavView.swift */,
+			);
+			path = Home;
 			sourceTree = "<group>";
 		};
 		0F285C38287B5D1B00BAD94B /* Login */ = {
@@ -169,6 +181,7 @@
 				0F285C38287B5D1B00BAD94B /* Login */,
 				0F3BECF32868A18E0011213C /* ContentView.swift */,
 				0F3BED332868BA260011213C /* HomeView.swift */,
+				0F17FA01287F9ED1005618A4 /* Home */,
 				0F3BED352868BA310011213C /* ExploreView.swift */,
 				0F3BED372868BA390011213C /* PostView.swift */,
 				0F3BED392868BA430011213C /* MessageView.swift */,
@@ -195,6 +208,7 @@
 			isa = PBXGroup;
 			children = (
 				0F4A4BE5287B39EF001DD803 /* Error.swift */,
+				0F17FA0428804B2F005618A4 /* Extensions.swift */,
 			);
 			path = Other;
 			sourceTree = "<group>";
@@ -368,7 +382,9 @@
 				0F285C35287B5A7D00BAD94B /* SignUpView.swift in Sources */,
 				0F3BED302868B9F60011213C /* Post-ViewModel.swift in Sources */,
 				0F3BECF22868A18E0011213C /* CityBuyApp.swift in Sources */,
+				0F17FA0528804B2F005618A4 /* Extensions.swift in Sources */,
 				0F285C37287B5AEF00BAD94B /* RecoveryView.swift in Sources */,
+				0F17FA032880476A005618A4 /* HomeNavView.swift in Sources */,
 				0F3BED382868BA390011213C /* PostView.swift in Sources */,
 				0F285C33287B557400BAD94B /* DatabaseManager.swift in Sources */,
 			);
@@ -504,6 +520,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = CityBuy/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Use the location to find the right city";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -515,6 +532,10 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
+				"OTHER_LDFLAGS[arch=*]" = (
+					"-Xlinker",
+					"-interposable",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.st3veshi.CityBuy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -536,6 +557,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = CityBuy/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Use the location to find the right city";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;

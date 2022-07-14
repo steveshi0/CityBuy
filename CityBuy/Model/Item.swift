@@ -18,7 +18,7 @@ struct Item: Codable {
 }
 
 // Enumeration of the categories available for each product
-enum ItemAttributes: String, Codable {
+enum ItemAttributes: String, Codable, CaseIterable {
     case Home = "Home & Kitchen"
     case Beauty = "Beauty & Personal Care"
     case Toys = "Toys & Games"
