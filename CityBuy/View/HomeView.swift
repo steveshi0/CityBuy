@@ -27,14 +27,25 @@ struct HomeView: View {
                 VStack(alignment: .center, spacing: 0) {
                     ScrollView(.vertical, showsIndicators: false) {
                         LazyVGrid(columns: Array.init(repeating: GridItem(.adaptive(minimum: geo.size.width / 2)), count: 2), spacing: 5) {
-                            ForEach (0..<11) { _ in
-                                Rectangle()
-                                    .frame(width: geo.size.width / 2.35, height: geo.size.width / 2.35)
-                                    .background(Color.red)
+                            ForEach (0..<11, id: \.self) { _ in
+                                NavigationLink(destination: HomeItemView()) {
+                                    ZStack {
+                                        Rectangle()
+                                            .frame(width: geo.size.width / 2.05, height: geo.size.width / 2.05)
+                                            .cornerRadius(5)
+//                                            .padding(EdgeInsets(top: 0, leading: 2.5, bottom: 0, trailing: 2.5))
+                                        VStack(alignment: .trailing) {
+                                            Spacer()
+                                            Text("$99")
+                                                .font(.headline)
+                                                .fontWeight(.bold)
+                                                .foregroundColor(.white)
+                                        }.frame(width: geo.size.width / 2.35, height: geo.size.width / 2.35)
+                                    }
+                                }
                             }
-                        }
+                        }.padding(7.5)
                     }
-                    .padding()
                 }.background(Color("Background"))
             }
         }

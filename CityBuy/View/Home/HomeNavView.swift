@@ -45,6 +45,11 @@ struct HomeNavView: View {
                         Button("Condition") {
                             print("Condtion clicked")
                         }.navFilterStyle()
+                        
+                        Button("Sold") {
+                            print("Sold clicked")
+                        }.navFilterStyle()
+                        
                     }
                 }.padding(EdgeInsets(top: 5, leading: 1, bottom: 5, trailing: 1))
             }
