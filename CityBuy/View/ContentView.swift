@@ -11,7 +11,7 @@ import Inject
 struct ContentView: View {
     @ObserveInjection var inject // INJECT
     
-    @State private var tabSelection = 1
+    @State private var tabSelection = 2
     
     var body: some View {
         TabView(selection: $tabSelection) {

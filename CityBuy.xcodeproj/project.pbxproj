@@ -125,6 +125,13 @@
 			path = Post;
 			sourceTree = "<group>";
 		};
+		0F17FA0D28819964005618A4 /* Explore */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Explore;
+			sourceTree = "<group>";
+		};
 		0F285C38287B5D1B00BAD94B /* Login */ = {
 			isa = PBXGroup;
 			children = (
@@ -199,6 +206,7 @@
 				0F3BED332868BA260011213C /* HomeView.swift */,
 				0F17FA01287F9ED1005618A4 /* Home */,
 				0F3BED352868BA310011213C /* ExploreView.swift */,
+				0F17FA0D28819964005618A4 /* Explore */,
 				0F3BED372868BA390011213C /* PostView.swift */,
 				0F17FA0828819717005618A4 /* Post */,
 				0F3BED392868BA430011213C /* MessageView.swift */,

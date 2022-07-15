@@ -12,10 +12,71 @@
  */
 
 import SwiftUI
+import Inject
 
 struct PostView: View {
+    @ObserveInjection var inject // INJECT
+    
+    @StateObject var PostVM = PostViewModel()
+    @State private var cameraOn = false
+    @State private var albumOn = false
+    
+    
+    // Width and Height for the picture placeholder
+    var picWidth: CGFloat {
+        UIScreen.main.bounds.width - 20
+    }
+    var picHeight: CGFloat {
+        UIScreen.main.bounds.height / 3
+    }
+    var topHeight: CGFloat {
+        UIScreen.main.bounds.height / 3
+    }
+    
     var body: some View {
-        Text("Post")
+        NavigationView {
+            VStack(spacing: 0) {
+                ZStack {
+                    Rectangle()
+                        .foregroundColor(Color.blue)
+                        .frame(width: picWidth - 10, height: picHeight, alignment: .center)
+                        .cornerRadius(7.5)
+                        .onTapGesture {
+                            print("Clicked item picture")
+                        }
+                    VStack {
+                        Spacer()
+                        HStack(spacing: 25) {
+                            Spacer()
+                            Image(systemName: "camera")
+                                .font(.largeTitle)
+                                .foregroundColor(Color("Text"))
+                                .onTapGesture {
+                                    cameraOn = true
+                                }
+                            Image(systemName: "photo")
+                                .font(.largeTitle)
+                                .foregroundColor(Color("Text"))
+                                .onTapGesture {
+                                    albumOn = true
+                                }
+                        }.padding()
+                    }
+                }.frame(height: picHeight)
+                Form {
+                    Section {
+                        Text("Hello")
+                    } header: {
+                        Text("Item name")
+                    }
+                }
+                .cornerRadius(10)
+            }
+            .padding()
+            .navigationBarHidden(true)
+        }
+        
+        .enableInjection() // INJECT
     }
 }
 

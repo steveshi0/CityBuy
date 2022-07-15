@@ -32,4 +32,5 @@ enum ItemAttributes: String, Codable, CaseIterable {
     case Kitchen = "Kitchen & Dining"
     case Baby = "Baby"
     case Electronics = "Electronics"
+    case Other = "Other"
 }
