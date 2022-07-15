@@ -6,11 +6,8 @@
 //
 
 import SwiftUI
-import Inject
 
 struct ContentView: View {
-    @ObserveInjection var inject // INJECT
-    
     @State private var tabSelection = 2
     
     var body: some View {
@@ -36,8 +33,6 @@ struct ContentView: View {
                     Label("Profile", systemImage: "person.crop.circle")
                 }.tag(4)
         }
-        
-        .enableInjection() // INJECT
     }
 }
 

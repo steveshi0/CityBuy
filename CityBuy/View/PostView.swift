@@ -12,12 +12,10 @@
  */
 
 import SwiftUI
-import Inject
 
 struct PostView: View {
-    @ObserveInjection var inject // INJECT
+    @StateObject var postVM = PostViewModel()
     
-    @StateObject var PostVM = PostViewModel()
     @State private var cameraOn = false
     @State private var albumOn = false
     
@@ -33,17 +31,40 @@ struct PostView: View {
         UIScreen.main.bounds.height / 3
     }
     
+    struct firstImageView: View {
+        @State var imageHolder: [UIImage]
+        var picWidth: CGFloat {
+            UIScreen.main.bounds.width - 20
+        }
+        var picHeight: CGFloat {
+            UIScreen.main.bounds.height / 3
+        }
+        
+        var body: some View {
+            if imageHolder.count == 0 {
+                Rectangle()
+                    .foregroundColor(Color.blue)
+                    .frame(width: picWidth - 10, height: picHeight, alignment: .center)
+                    .cornerRadius(7.5)
+                    .onTapGesture {
+                        print("Clicked item picture")
+                    }
+            } else {
+                Image(uiImage: imageHolder[0])
+                    .frame(width: picWidth - 10, height: picHeight, alignment: .center)
+                    .cornerRadius(7.5)
+                    .onTapGesture {
+                        print("Clicked item picture")
+                    }
+            }
+        }
+    }
+    
     var body: some View {
         NavigationView {
             VStack(spacing: 0) {
                 ZStack {
-                    Rectangle()
-                        .foregroundColor(Color.blue)
-                        .frame(width: picWidth - 10, height: picHeight, alignment: .center)
-                        .cornerRadius(7.5)
-                        .onTapGesture {
-                            print("Clicked item picture")
-                        }
+                    firstImageView(imageHolder: postVM.images)
                     VStack {
                         Spacer()
                         HStack(spacing: 25) {
@@ -52,14 +73,27 @@ struct PostView: View {
                                 .font(.largeTitle)
                                 .foregroundColor(Color("Text"))
                                 .onTapGesture {
+                                    print("Make camara on")
                                     cameraOn = true
+                                }
+                                .sheet(isPresented: $cameraOn) {
+                                    CameraPickerView(isPresented: $cameraOn) { img in
+                                        print("Camera")
+                                    }
                                 }
                             Image(systemName: "photo")
                                 .font(.largeTitle)
                                 .foregroundColor(Color("Text"))
                                 .onTapGesture {
+                                    print("Make album on")
                                     albumOn = true
                                 }
+                                .sheet(isPresented: $albumOn) {
+                                    PhotosPickerView(isPresented: $albumOn) { res in
+                                        print("Album")
+                                    }
+                                }
+                                       
                         }.padding()
                     }
                 }.frame(height: picHeight)
@@ -76,7 +110,6 @@ struct PostView: View {
             .navigationBarHidden(true)
         }
         
-        .enableInjection() // INJECT
     }
 }
 

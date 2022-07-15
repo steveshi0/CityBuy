@@ -9,7 +9,7 @@ import SwiftUI
 import PhotosUI
 
 // Photo picker view to allow the user to pick images from their album
-struct CreationPhotosPickerView: UIViewControllerRepresentable {
+struct PhotosPickerView: UIViewControllerRepresentable {
     @Binding var isPresented: Bool
     let onResultsHandler: ([PHPickerResult]) -> Void
     

@@ -9,7 +9,7 @@ import Foundation
 import SwiftUI
 
 // Camera view for user to take pictures of the product
-struct CreationCameraPickerView: UIViewControllerRepresentable {
+struct CameraPickerView: UIViewControllerRepresentable {
     @Binding var isPresented: Bool
     let onTakePicture: (UIImage) -> Void
     
