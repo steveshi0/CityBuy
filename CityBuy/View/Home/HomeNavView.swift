@@ -20,11 +20,18 @@ struct HomeNavView: View {
                                 .fontWeight(.bold)
                                 .foregroundColor(Color("Text"))
                             Spacer()
-                            Image(systemName: "message")
-                                .font(.title)
-                                .onTapGesture {
-                                    print("Message clicked")
-                                }
+                            HStack(spacing: 20) {
+                                Image(systemName: "cart")
+                                    .font(.title)
+                                    .onTapGesture {
+                                        print("Cart clicked")
+                                    }
+                                Image(systemName: "message")
+                                    .font(.title)
+                                    .onTapGesture {
+                                        print("Message clicked")
+                                    }
+                            }
                         }
                     }.padding(.horizontal)
                 }

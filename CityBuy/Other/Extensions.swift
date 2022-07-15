@@ -7,7 +7,7 @@
 
 import Foundation
 import SwiftUI
-
+import FirebaseFirestore
 
 // View extension for the filters within Home navigation area
 struct navFilter: ViewModifier {
@@ -16,7 +16,6 @@ struct navFilter: ViewModifier {
             .padding(7.5)
             .frame(width: 100)
             .foregroundColor(Color("Text"))
-            .background(Color(""))
             .overlay(
                 RoundedRectangle(cornerRadius: 20.0)
                     .strokeBorder(Color("HomeviewFilterBack"), style: StrokeStyle(lineWidth: 0.5)))

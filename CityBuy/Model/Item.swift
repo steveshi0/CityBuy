@@ -8,12 +8,14 @@
 import Foundation
 
 // Item Model - individual item
-struct Item: Codable {
+struct Item: Identifiable {
+    let id: String
     let name: String
     let cost: Double
-    let time: String
+    let time: TimeInterval
     let sold: Bool
     let image: [Data]
+    let seller: User
     let attributes: ItemAttributes
 }
 

@@ -9,6 +9,6 @@ import SwiftUI
 
 struct HomeItemView: View {
     var body: some View {
-        Text("Hello")
+        Text("Hello There!")
     }
 }
