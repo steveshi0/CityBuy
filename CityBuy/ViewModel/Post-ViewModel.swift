@@ -15,6 +15,6 @@ class PostViewModel: ObservableObject {
     @Published var attributes: ItemAttributes = .Other
     
     func postItem(completion: @escaping (Bool) -> Void) {
-        
+        completion(Bool.random())
     }
 }
