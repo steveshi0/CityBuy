@@ -12,6 +12,8 @@
 		0F17FA032880476A005618A4 /* HomeNavView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F17FA022880476A005618A4 /* HomeNavView.swift */; };
 		0F17FA0528804B2F005618A4 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F17FA0428804B2F005618A4 /* Extensions.swift */; };
 		0F17FA0728805919005618A4 /* HomeItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F17FA0628805919005618A4 /* HomeItemView.swift */; };
+		0F17FA0A2881972B005618A4 /* CameraPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F17FA092881972B005618A4 /* CameraPickerView.swift */; };
+		0F17FA0C2881974F005618A4 /* PhotoPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F17FA0B2881974F005618A4 /* PhotoPickerView.swift */; };
 		0F285C33287B557400BAD94B /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F285C32287B557400BAD94B /* DatabaseManager.swift */; };
 		0F285C35287B5A7D00BAD94B /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F285C34287B5A7D00BAD94B /* SignUpView.swift */; };
 		0F285C37287B5AEF00BAD94B /* RecoveryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F285C36287B5AEF00BAD94B /* RecoveryView.swift */; };
@@ -49,6 +51,8 @@
 		0F17FA022880476A005618A4 /* HomeNavView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeNavView.swift; sourceTree = "<group>"; };
 		0F17FA0428804B2F005618A4 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		0F17FA0628805919005618A4 /* HomeItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeItemView.swift; sourceTree = "<group>"; };
+		0F17FA092881972B005618A4 /* CameraPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraPickerView.swift; sourceTree = "<group>"; };
+		0F17FA0B2881974F005618A4 /* PhotoPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoPickerView.swift; sourceTree = "<group>"; };
 		0F285C32287B557400BAD94B /* DatabaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseManager.swift; sourceTree = "<group>"; };
 		0F285C34287B5A7D00BAD94B /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 		0F285C36287B5AEF00BAD94B /* RecoveryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecoveryView.swift; sourceTree = "<group>"; };
@@ -110,6 +114,15 @@
 				0F17FA0628805919005618A4 /* HomeItemView.swift */,
 			);
 			path = Home;
+			sourceTree = "<group>";
+		};
+		0F17FA0828819717005618A4 /* Post */ = {
+			isa = PBXGroup;
+			children = (
+				0F17FA092881972B005618A4 /* CameraPickerView.swift */,
+				0F17FA0B2881974F005618A4 /* PhotoPickerView.swift */,
+			);
+			path = Post;
 			sourceTree = "<group>";
 		};
 		0F285C38287B5D1B00BAD94B /* Login */ = {
@@ -187,6 +200,7 @@
 				0F17FA01287F9ED1005618A4 /* Home */,
 				0F3BED352868BA310011213C /* ExploreView.swift */,
 				0F3BED372868BA390011213C /* PostView.swift */,
+				0F17FA0828819717005618A4 /* Post */,
 				0F3BED392868BA430011213C /* MessageView.swift */,
 				0F3BED3B2868BA4B0011213C /* ProfileView.swift */,
 			);
@@ -373,6 +387,7 @@
 				0F3BED342868BA260011213C /* HomeView.swift in Sources */,
 				0F17FA0728805919005618A4 /* HomeItemView.swift in Sources */,
 				0F285C3A287B5F2300BAD94B /* Item.swift in Sources */,
+				0F17FA0A2881972B005618A4 /* CameraPickerView.swift in Sources */,
 				0F3BED2E2868B9A90011213C /* Map-ViewModel.swift in Sources */,
 				0F3BED2A2868B9210011213C /* Profile-ViewModel.swift in Sources */,
 				0F4A4BE6287B39EF001DD803 /* Error.swift in Sources */,
@@ -383,6 +398,7 @@
 				0F3BED362868BA310011213C /* ExploreView.swift in Sources */,
 				0F3BED2C2868B9440011213C /* Home-ViewModel.swift in Sources */,
 				0F3BECF42868A18E0011213C /* ContentView.swift in Sources */,
+				0F17FA0C2881974F005618A4 /* PhotoPickerView.swift in Sources */,
 				0F285C35287B5A7D00BAD94B /* SignUpView.swift in Sources */,
 				0F3BED302868B9F60011213C /* Post-ViewModel.swift in Sources */,
 				0F3BECF22868A18E0011213C /* CityBuyApp.swift in Sources */,
