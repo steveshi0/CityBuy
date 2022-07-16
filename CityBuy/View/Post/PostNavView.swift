@@ -11,6 +11,7 @@ struct PostNavView: View {
     @ObservedObject var postVM: PostViewModel
     @Binding var showError: Bool
     @Binding var showSucce: Bool
+    @Binding var exitPost: Bool
     
     func sellClick() {
         postVM.postItem { res in
@@ -29,16 +30,20 @@ struct PostNavView: View {
             VStack(spacing: 5) {
                 VStack {
                     ZStack {
-                        HStack(spacing: 15) {
-                            Text("Post")
+                        HStack(spacing: 50) {
+                            Text("x")
+                                .font(.largeTitle)
+                                .foregroundColor(Color("Text"))
+                                .onTapGesture {
+                                    exitPost = true
+                                }
+                            Text("Start Post")
                                 .font(.title)
                                 .fontWeight(.bold)
                                 .foregroundColor(Color("Text"))
-                            Spacer()
-                            Button(action: sellClick) {
-                                Label("Sell", systemImage: "paperplane")
-                                    .font(.title)
-                            }
+                            Text("Post")
+                                .font(.largeTitle)
+                                .foregroundColor(Color("Text"))
                         }
                     }.padding(.horizontal)
                 }

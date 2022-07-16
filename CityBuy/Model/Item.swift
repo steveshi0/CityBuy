@@ -20,7 +20,7 @@ struct Item: Identifiable {
 }
 
 // Enumeration of the categories available for each product
-enum ItemAttributes: String, Codable, CaseIterable {
+enum ItemAttributes: String, CaseIterable, Identifiable {
     case Home = "Home & Kitchen"
     case Beauty = "Beauty & Personal Care"
     case Toys = "Toys & Games"
@@ -33,4 +33,14 @@ enum ItemAttributes: String, Codable, CaseIterable {
     case Baby = "Baby"
     case Electronics = "Electronics"
     case Other = "Other"
+    
+    var id: Self { self }
+}
+
+enum ItemCondition: String, CaseIterable, Identifiable {
+    case New = "New"
+    case Good = "Good"
+    case Poor = "Poor"
+    
+    var id: Self { self }
 }

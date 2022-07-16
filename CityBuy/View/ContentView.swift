@@ -30,7 +30,7 @@ struct ContentView: View {
                 }.tag(3)
             ProfileView()
                 .tabItem {
-                    Label("Profile", systemImage: "person.crop.circle")
+                    Label("Profile", systemImage: "person")
                 }.tag(4)
         }
     }
