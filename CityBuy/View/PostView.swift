@@ -20,12 +20,13 @@ struct PostView: View {
     @State private var cameraOn = false
     @State private var albumOn = false
     
-    @State private var exitPost = false
     @State private var showError = false
     @State private var showSucce = false
     
     @State private var gestOffset = CGSize.zero
     @State private var pictureInd = 0
+    
+    @State private var postingProgress = false
     
     // Width and Height for the picture placeholder
     var picWidth: CGFloat {
@@ -40,90 +41,113 @@ struct PostView: View {
     
     var body: some View {
         NavigationView {
-            Form {
-                Section {
-                    VStack {
-                        if postVM.images.count == 0 {
-                            Rectangle()
-                                .foregroundColor(Color.gray)
-                                .frame(width: picWidth, height: picWidth)
-                                .cornerRadius(7.5)
-                        } else {
-                            ScrollView(.horizontal, showsIndicators: false) {
-                                HStack {
-                                    ForEach(0..<postVM.images.count, id: \.self) { ind in
-                                        Image(uiImage: postVM.images[ind])
-                                            .resizable()
-                                            .scaledToFill()
-                                            .frame(width: picWidth, height: picWidth)
-                                            .cornerRadius(7.5)
-                                    }
-                                }
-                            }
-                        }
-                        HStack(spacing: 10) {
-                            Spacer()
-                            Image(systemName: "camera")
-                                .font(.title)
-                                .foregroundColor(Color("Text"))
-                                .onTapGesture { cameraOn = true }
-                                .sheet(isPresented: $cameraOn) {
-                                    CameraPickerView(isPresented: $cameraOn) { res in
-                                        DispatchQueue.main.async {
-                                            postVM.images.append(res)
+            Group {
+                if showSucce {
+                    withAnimation {
+                        Text("Success")
+                    }
+                } else {
+                    Form {
+                        Section {
+                            VStack {
+                                if postVM.images.count == 0 {
+                                    Image(systemName: "photo.fill.on.rectangle.fill")
+                                        .font(.system(size: 50))
+                                        .foregroundColor(Color.gray)
+                                        .frame(width: picWidth, height: picWidth)
+                                        .cornerRadius(7.5)
+                                } else {
+                                    ScrollView(.horizontal, showsIndicators: false) {
+                                        HStack {
+                                            ForEach(0..<postVM.images.count, id: \.self) { ind in
+                                                Image(uiImage: postVM.images[ind])
+                                                    .resizable()
+                                                    .scaledToFill()
+                                                    .frame(width: picWidth, height: picWidth)
+                                                    .cornerRadius(7.5)
+                                            }
                                         }
                                     }
                                 }
-                            Image(systemName: "photo")
-                                .font(.title)
-                                .foregroundColor(Color("Text"))
-                                .onTapGesture { albumOn = true }
-                                .sheet(isPresented: $albumOn) {
-                                    PhotosPickerView(isPresented: $albumOn) { results in
-                                        postVM.uploadPhotoPicker(results)
-                                    }
+                                HStack(spacing: 10) {
+                                    Spacer()
+                                    Image(systemName: "camera")
+                                        .font(.title)
+                                        .foregroundColor(Color("Text"))
+                                        .onTapGesture { cameraOn = true }
+                                        .sheet(isPresented: $cameraOn) {
+                                            CameraPickerView(isPresented: $cameraOn) { res in
+                                                DispatchQueue.main.async {
+                                                    postVM.images.append(res)
+                                                }
+                                            }
+                                        }
+                                    Image(systemName: "photo")
+                                        .font(.title)
+                                        .foregroundColor(Color("Text"))
+                                        .onTapGesture { albumOn = true }
+                                        .sheet(isPresented: $albumOn) {
+                                            PhotosPickerView(isPresented: $albumOn) { results in
+                                                postVM.uploadPhotoPicker(results)
+                                            }
+                                        }
                                 }
+                            }
+                        } header: {
+                            HStack {
+                                Text("Add up to four photos")
+                                    .foregroundColor(Color("Text"))
+                                    .fontWeight(.bold)
+                                Spacer()
+                                if postVM.images.count != 0 {
+                                    Text("Clear gallery")
+                                        .foregroundColor(Color("Text"))
+                                        .padding(2.5)
+                                        .overlay(RoundedRectangle(cornerRadius: 10.0).strokeBorder(Color("Theme"), style: StrokeStyle(lineWidth: 0.25)))
+                                        .background(Color.red)
+                                        .cornerRadius(10.0)
+                                        .onTapGesture {
+                                            postVM.images.removeAll()
+                                        }
+                                }
+                            }
+                        }
+                        
+                        Section {
+                            TextField("What is the name?", text: $postVM.name)
+                                .frame(width: UIScreen.main.bounds.width)
+                            TextField("Describe the item", text: $postVM.descr)
+                                .frame(width: UIScreen.main.bounds.width)
+                        } header: {
+                            Text("Basic")
+                                .foregroundColor(Color("Text"))
+                                .fontWeight(.bold)
+                        }
+                        
+                        Section {
+                            TextField("How much is it selling", value: $postVM.cost, formatter: decimalFormat)
+                            Picker(selection: $postVM.category) {
+                                ForEach(ItemAttributes.allCases) { attribute in
+                                    Text(attribute.rawValue)
+                                }
+                            } label: {
+                                Text("Category")
+                                    .fontWeight(.medium)
+                            }
+                            Picker(selection: $postVM.condition) {
+                                ForEach(ItemCondition.allCases) { condition in
+                                    Text(condition.rawValue)
+                                }
+                            } label: {
+                                Text("Condition")
+                                    .fontWeight(.medium)
+                            }
+                        } header: {
+                            Text("Details")
+                                .foregroundColor(Color("Text"))
+                                .fontWeight(.bold)
                         }
                     }
-                } header: {
-                    Text("Add up to four photos")
-                        .foregroundColor(Color("Text"))
-                        .fontWeight(.bold)
-                }
-                
-                Section {
-                    TextField("What is the name?", text: $postVM.name)
-                        .frame(width: UIScreen.main.bounds.width)
-                    TextField("Describe the item", text: $postVM.descr)
-                        .frame(width: UIScreen.main.bounds.width)
-                } header: {
-                    Text("Basic")
-                        .foregroundColor(Color("Text"))
-                        .fontWeight(.bold)
-                }
-                
-                Section {
-                    TextField("How much is it selling", value: $postVM.cost, formatter: decimalFormat)
-                    Picker(selection: $postVM.category) {
-                        ForEach(ItemAttributes.allCases) { attribute in
-                            Text(attribute.rawValue)
-                        }
-                    } label: {
-                        Text("Category")
-                            .fontWeight(.medium)
-                    }
-                    Picker(selection: $postVM.condition) {
-                        ForEach(ItemCondition.allCases) { condition in
-                            Text(condition.rawValue)
-                        }
-                    } label: {
-                        Text("Condition")
-                            .fontWeight(.medium)
-                    }
-                } header: {
-                    Text("Details")
-                        .foregroundColor(Color("Text"))
-                        .fontWeight(.bold)
                 }
             }
             .navigationTitle("New Post")
@@ -132,13 +156,21 @@ struct PostView: View {
                 ToolbarItem(placement: .navigationBarLeading) {
                     Image(systemName: "xmark")
                         .onTapGesture {
-                            print("Exit")
+                            withAnimation {
+                                //                                tabselection = 1
+                            }
                         }
                 }
                 ToolbarItem(placement: .navigationBarTrailing) {
                     HStack {
-                        Image(systemName: "paperplane.fill")
-                        Text("Post")
+                        if postingProgress {
+                            ProgressView()
+                                .cornerRadius(10)
+                                .overlay(RoundedRectangle(cornerRadius: 10.0).strokeBorder(Color("Theme"), style: StrokeStyle(lineWidth: 0.5)))
+                        } else {
+                            Image(systemName: "paperplane.fill")
+                            Text("Post")
+                        }
                     }
                     .padding(5)
                     .background(Color("Theme"))
@@ -146,8 +178,10 @@ struct PostView: View {
                     .overlay(RoundedRectangle(cornerRadius: 10.0).strokeBorder(Color("Theme"), style: StrokeStyle(lineWidth: 0.5)))
                     .foregroundColor(postVM.canPost ? .blue : .gray)
                     .onTapGesture {
-                        guard !postVM.canPost else { return }
+                        guard postVM.canPost else { return }
+                        postingProgress = true
                         postVM.postItem { res in
+                            postingProgress = false
                             print("Post result: \(res)")
                             if res {
                                 showSucce = true
@@ -158,13 +192,9 @@ struct PostView: View {
                     }
                 }
             }
+            .alert(isPresented: $showError) {
+                Alert(title: Text("Upload Error"), message: Text("Unexpected error when posting item, please try again later."), dismissButton: .default(Text("Ok")))
+            }
         }
-        
-    }
-}
-
-struct PostView_Previews: PreviewProvider {
-    static var previews: some View {
-        PostView()
     }
 }

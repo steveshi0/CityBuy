@@ -18,7 +18,7 @@ struct navFilter: ViewModifier {
             .foregroundColor(Color("Text"))
             .overlay(
                 RoundedRectangle(cornerRadius: 20.0)
-                    .strokeBorder(Color("HomeviewFilterBack"), style: StrokeStyle(lineWidth: 0.5)))
+                    .strokeBorder(Color("HomeviewFilterBack"), style: StrokeStyle(lineWidth: 0.2)))
     }
 }
 extension View {

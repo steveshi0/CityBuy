@@ -17,7 +17,7 @@ struct HomeNavView: View {
                         HStack(spacing: 15) {
                             Text("Home")
                                 .font(.title)
-                                .fontWeight(.bold)
+                                .fontWeight(.medium)
                                 .foregroundColor(Color("Text"))
                             Spacer()
                             HStack(spacing: 20) {
