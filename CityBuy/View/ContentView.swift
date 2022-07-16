@@ -20,7 +20,7 @@ struct ContentView: View {
                 .tabItem {
                     Label("Explore", systemImage: "magnifyingglass")
                 }.tag(1)
-            PostView()
+            PostView(tabselection: $tabSelection)
                 .tabItem {
                     Label("Post", systemImage: "paperplane")
                 }.tag(2)

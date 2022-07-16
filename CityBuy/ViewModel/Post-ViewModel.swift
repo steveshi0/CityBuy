@@ -38,4 +38,13 @@ class PostViewModel: ObservableObject {
     func postItem(completion: @escaping (Bool) -> Void) {
         completion(Bool.random())
     }
+    
+    func finishIteration() {
+        name = ""
+        descr = ""
+        cost = 0
+        images = []
+        category = .Other
+        condition = .Good
+    }
 }
